@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #222;
+  color: white;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-family: monospace;
+}
+
+main {
+  display: flex;
+  gap: 5.0rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3.6rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 1.0rem;
+}
+
+.draggable-true span, .draggable-false span {
+  text-decoration: underline;
+}
+
+.draggable-true span {
+  color: green;
+}
+
+.draggable-false span {
+  color: red;
+}
+
+.draggable-true .column {
+  background-color: green;
+}
+
+.draggable-false .column {
+  background-color: red;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2.0rem;
+}
+
+.column {
+  width: 20.0rem;
+  height: fit-content;
+  min-height: 46.0rem;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) .0rem .8rem 2.4rem;
+  padding: 2.0rem;
+  margin: 0 auto;
+}
+
+.column div[draggable], .item {
+  width: 10.0rem;
+  height: 5.0rem;
+  margin: 0 auto 2.0rem;
+  font-size: 1.8rem;
+  background-color: #eee;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.2) .0rem .8rem 2.4rem;
+  color: black;
+}
+
+.column div[draggable]:hover, .item {
+  filter: brightness(.95);
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.dragging-item {
+  position: absolute;
+}
